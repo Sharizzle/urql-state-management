@@ -19,7 +19,7 @@ In the project directory, run:
 
 ## Authors
 
-* **Sharif Kanaan** - [GitHub](https://github.com/Sharizzle) | | [Website](https://sharif.thekanaan.com/) | | [Email](mailto:sharif@thekanaan.com) || [Linkedin](https://www.linkedin.com/in/SharifKanaan/)
+* **Sharif Kanaan** - [GitHub](https://github.com/Sharizzle) | | [Website](https://sharif.thekanaan.com/) | | [Email](mailto:sharif@thekanaan.com) | | [Linkedin](https://www.linkedin.com/in/SharifKanaan/)
 
 ## License
 
