@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Todos } from "./Todos";
+import { cacheExchange } from '@urql/exchange-graphcache';
+import { devtoolsExchange } from '@urql/devtools';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+import { createClient, Provider, dedupExchange, fetchExchange } from "urql";
+
+const cache = cacheExchange({})
+
+const client = createClient({
+  url: "https://0ufyz.sse.codesandbox.io",exchanges: [dedupExchange, devtoolsExchange, cache, fetchExchange]
+});
+
+export const App = () => (
+  <Provider value={client}>
+    <Todos />
+  </Provider>
+);
